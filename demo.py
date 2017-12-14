@@ -12,7 +12,8 @@ def test():
     # im_file = '/media/longc/Data/data/2DMOT2015/test/ETH-Crossing/img1/000100.jpg'
     image = cv2.imread(im_file)
 
-    model_file = '/media/longc/Data/models/VGGnet_fast_rcnn_iter_70000.h5'
+    model_file = 'models/saved_model3/faster_rcnn_100000.h5'
+    # model_file = 'models/VGGnet_fast_rcnn_iter_70000.h5'
     # model_file = '/media/longc/Data/models/faster_rcnn_pytorch3/faster_rcnn_100000.h5'
     # model_file = '/media/longc/Data/models/faster_rcnn_pytorch2/faster_rcnn_2000.h5'
     detector = FasterRCNN()
@@ -27,6 +28,10 @@ def test():
     t = Timer()
     t.tic()
     # image = np.zeros(shape=[600, 800, 3], dtype=np.uint8) + 255
+
+    # dets_np (n_box, 4)
+    # socres_np (n_box, ) [0.9, 0.96, ...]
+    # classes_np (n_box, ) ['dog', 'human', 'people', ...]
     dets, scores, classes = detector.detect(image, 0.7)
     runtime = t.toc()
     print('total spend: {}s'.format(runtime))
@@ -38,8 +43,8 @@ def test():
         cv2.putText(im2show, '%s: %.3f' % (classes[i], scores[i]), (det[0], det[1] + 15), cv2.FONT_HERSHEY_PLAIN,
                     1.0, (0, 0, 255), thickness=1)
     cv2.imwrite(os.path.join('demo', 'out.jpg'), im2show)
-    cv2.imshow('demo', im2show)
-    cv2.waitKey(0)
+    # cv2.imshow('demo', im2show)
+    # cv2.waitKey(0)
 
 
 if __name__ == '__main__':

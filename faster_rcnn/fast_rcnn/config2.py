@@ -256,7 +256,7 @@ def _add_more_info(is_train):
     num_scale_base = len(scales_base)
     num = (num_scale_base - 1) * num_per_octave + 1
     scales = []
-    for i in xrange(num):
+    for i in range(num):
         index_scale_base = i / num_per_octave
         sbase = scales_base[index_scale_base]
         j = i % num_per_octave
@@ -303,7 +303,7 @@ def _add_more_info(is_train):
     num_aspect = len(aspect)
     widths = np.zeros((num_aspect), dtype=np.float32)
     heights = np.zeros((num_aspect), dtype=np.float32)
-    for i in xrange(num_aspect):
+    for i in range(num_aspect):
         widths[i] = math.sqrt(area / aspect[i])
         heights[i] = widths[i] * aspect[i]
 

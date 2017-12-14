@@ -49,8 +49,13 @@ def load_net(fname, net):
         v.copy_(param)
 
 
+def load_dict(fname, net):
+    state_dict = torch.load(fname)
+    net.load_state_dict({k: v for k, v in state_dict.items() if k in net.state_dict()})
+
+
 def load_pretrained_npy(faster_rcnn_model, fname):
-    params = np.load(fname).item()
+    params = np.load(fname, encoding='latin1').item()
     # vgg16
     vgg16_dict = faster_rcnn_model.rpn.features.state_dict()
     for name, val in vgg16_dict.items():
@@ -62,6 +67,7 @@ def load_pretrained_npy(faster_rcnn_model, fname):
         i, j = int(name[4]), int(name[6]) + 1
         ptype = 'weights' if name[-1] == 't' else 'biases'
         key = 'conv{}_{}'.format(i, j)
+
         param = torch.from_numpy(params[key][ptype])
 
         if ptype == 'weights':

@@ -32,10 +32,12 @@ def log_print(text, color=None, on_color=None, attrs=None):
 
 
 # hyper-parameters
-# ------------
-imdb_name = 'voc_2007_trainval'
+# ------------#hcp
+
+imdb_name = 'voc_2012_trainval'
 cfg_file = 'experiments/cfgs/faster_rcnn_end2end.yml'
 pretrained_model = 'data/pretrained_model/VGG_imagenet.npy'
+# pretrained_model = 'models/VGGnet_fast_rcnn_iter_70000.h5'
 output_dir = 'models/saved_model3'
 
 start_step = 0
@@ -71,7 +73,10 @@ data_layer = RoIDataLayer(roidb, imdb.num_classes)
 # load net
 net = FasterRCNN(classes=imdb.classes, debug=_DEBUG)
 network.weights_normal_init(net, dev=0.01)
+
 network.load_pretrained_npy(net, pretrained_model)
+# network.load_net(pretrained_model, net)
+
 # model_file = '/media/longc/Data/models/VGGnet_fast_rcnn_iter_70000.h5'
 # model_file = 'models/saved_model3/faster_rcnn_60000.h5'
 # network.load_net(model_file, net)
