@@ -6,7 +6,7 @@
 - Based on **longcw/faster_rcnn_pytorch (python2.7)**, I modified the code to **python3.6** and **numpy 1.13.3**. So the numpy version do not need to change into 1.11.
 - Follow **longcw**'s code, I draw some picture to understand the process of Faster R-CNN.
 
-Thank **longcw**, his code helps me a lot to understand Faster R-CNN. Also the readme files of **longcw** and **ruotianluo** tell me how to build cython models. You can also follow their code and readme file.
+Thank **longcw**, his code helps me a lot to understand Faster R-CNN. Also the readme files of **longcw** and **ruotianluo** tell me how to build cython models. You can follow their code and readme file.
 
 **If there is something I can not write in my repertory, please contact me.**
 
@@ -51,7 +51,7 @@ You can follow [**longcw/faster_rcnn_pytorch**](https://github.com/daviddao/spat
 
 - **demo.py**  You need to download **trained_weights(VGGnet_fast_rcnn_iter_70000.h5)** and load it's weight.
 - **train.py** You need to download **VOC dataset** and **VGG_imagenet_pretrained_weight(VGG_imagenet.npy)**.
-- **test.py** YOu need to download **VOC dataset**.
+- **test.py** You need to download **VOC dataset**.
 
 ## Process of Code
 ![](pics/process.png)
