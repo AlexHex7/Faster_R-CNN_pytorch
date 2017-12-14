@@ -50,7 +50,7 @@ Follow [**longcw/faster_rcnn_pytorch**](https://github.com/longcw/faster_rcnn_py
 You can follow [**longcw/faster_rcnn_pytorch**](https://github.com/daviddao/spatial-transformer-tensorflow) .
 
 - **demo.py**  You need to download **trained_weights(VGGnet_fast_rcnn_iter_70000.h5)** and load it's weight.
-- **train.py** You need to download **VOC dataset** and ** VGG_imagenet_pretrained_weight(VGG_imagenet.npy)**.
+- **train.py** You need to download **VOC dataset** and **VGG_imagenet_pretrained_weight(VGG_imagenet.npy)**.
 - **test.py** YOu need to download **VOC dataset**.
 
 ## Process of Code
