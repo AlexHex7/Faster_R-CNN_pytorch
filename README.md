@@ -27,7 +27,7 @@ Follow [**longcw/faster_rcnn_pytorch**](https://github.com/longcw/faster_rcnn_py
     pip install easydict
     ```
   
-2. Choose arch of GPU type. (directly copy from[**ruotianluo/pytorch-faster-rcnn/README.md**](https://raw.githubusercontent.com/ruotianluo/pytorch-faster-rcnn/master/README.md))
+2. Choose arch of GPU type. (directly copy from [**ruotianluo/pytorch-faster-rcnn/README.md**](https://raw.githubusercontent.com/ruotianluo/pytorch-faster-rcnn/master/README.md))
 
   | GPU model  | Architecture |
   | ------------- | ------------- |
