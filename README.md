@@ -3,7 +3,7 @@
 - Implementation of [**Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks**](https://arxiv.org/abs/1506.01497).  
 
 ## Statement
-- Based on **longcw/faster_rcnn_pytorch (python2.7)**, I modified the code to **python3.6** and **numpy 1.13.3**. So the numpy version do not need to change into 1.11.
+- Based on **longcw/faster_rcnn_pytorch (python2.7)**, I modified the code so that it can run on  **python3.6** and **numpy 1.13.3**. So the numpy version do not need to change into 1.11.
 - Follow **longcw**'s code, I draw some picture to understand the process of Faster R-CNN.
 
 Thank **longcw**, his code helps me a lot to understand Faster R-CNN. Also the readme files of **longcw** and **ruotianluo** tell me how to build cython models. You can follow their code and readme file.
